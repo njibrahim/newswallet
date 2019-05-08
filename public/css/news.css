@@ -1,0 +1,12 @@
+body {
+}
+
+.news-image {
+    height: 240px;
+    margin: 10px 0;
+}
+
+.news-image img {
+    height: 100%;
+    border-radius: 4px;
+}

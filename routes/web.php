@@ -10,14 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 Route::get('/', function () {
     return redirect("home");
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('about', 'HomeController@about');
+Route::get('do', 'HomeController@do');
+Route::get('home', 'HomeController@index')->name('home');
 Route::get('article/{id}', 'HomeController@article');
 Route::get('pockets', 'HomeController@pockets');
 Route::any('category', 'HomeController@category');

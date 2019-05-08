@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Article;
+use App\User;
 
 class ApiController extends Controller
 {
@@ -39,6 +40,12 @@ class ApiController extends Controller
             "code" => $code,
             "data" => $data
         ], $code)->header("Request-Id", $id);
+    }
+
+    public function users() 
+    {
+        $users = User::get();
+        return $this->app_response($users);
     }
 
     public function categories() 

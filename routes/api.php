@@ -31,6 +31,9 @@ Route::group(['middleware' => 'auth:api'], function () {
 	Route::post("category/{id?}", "ApiController@postCategory");
 	Route::delete("category/{id}", "ApiController@deleteCategory");
 
+	# Get all users 
+	Route::get("users", "ApiController@users");
+
 	# ARTICLES
 	# Get all user articles
 	Route::get("articles", "ApiController@articles");
